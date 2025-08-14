@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aR's cookies — Toko Cookies Terenak</title>
+  <meta name="description" content="aR's cookies by Airthur — toko cookies terenak dengan bahan premium. Pesan online dengan keranjang belanja & checkout cepat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="https://fav.farm/🍪" />
+</head>
+<body>
+  <!-- Background Audio (royalty-free, lightweight). Controls via bottom-right FAB. -->
+  <audio id="bg-audio" loop preload="metadata" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4d5fcd0efb.mp3?filename=happy-day-112195.mp3"></audio>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <div class="brand">
+        <div class="logo">🍪</div>
+        <div>
+          <h1 class="brand__title">aR's cookies</h1>
+          <p class="brand__subtitle">oleh Airthur</p>
+        </div>
+      </div>
+      <nav class="nav__menu">
+        <a href="#home">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <div class="nav__actions">
+        <button id="themeToggle" class="btn btn--ghost" aria-label="Toggle theme">🌓</button>
+        <button id="cartButton" class="btn btn--cart" aria-label="Lihat Keranjang">
+          <span>🛒</span>
+          <span id="cartCount" class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / SLIDER -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <h2 class="uptitle reveal">Selamat datang di</h2>
+            <h3 class="headline reveal delay-1">aR's cookies<span class="sparkle">✨</span></h3>
+            <p class="subhead reveal delay-2">
+              Cookies renyah di luar, chewy di dalam. Bahan premium, rasa maksimal.
+              Nikmati pengiriman cepat & segar setiap hari!
+            </p>
+            <div class="hero__cta reveal delay-3">
+              <a href="#menu" class="btn btn--primary">Belanja Sekarang</a>
+              <a href="#about" class="btn btn--outline">Kenapa Kami?</a>
+            </div>
+            <div class="badges reveal delay-4">
+              <span>✅ Halal</span>
+              <span>🚚 Same-day (kota tertentu)</span>
+              <span>⭐ 4.9/5</span>
+            </div>
+          </div>
+
+          <div class="hero__slider card reveal delay-2">
+            <div class="slider" data-slider>
+              <div class="slides">
+                <div class="slide is-active">
+                  <img src="https://images.unsplash.com/photo-1508737804141-4c3b688e2546?q=80&w=1400&auto=format&fit=crop" alt="Chocolate chip cookies" />
+                </div>
+                <div class="slide">
+                  <img src="https://images.unsplash.com/photo-1599785209796-9e3361b8a7ac?q=80&w=1400&auto=format&fit=crop" alt="Assorted cookies on tray" />
+                </div>
+                <div class="slide">
+                  <img src="https://images.unsplash.com/photo-1607958996333-51f4f8d1f9b8?q=80&w=1400&auto=format&fit=crop" alt="Oatmeal cookies" />
+                </div>
+              </div>
+              <button class="slider__btn prev" aria-label="Sebelumnya">‹</button>
+              <button class="slider__btn next" aria-label="Berikutnya">›</button>
+              <div class="dots"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__wave" aria-hidden="true"></div>
+    </section>
+
+    <!-- MENU / PRODUCTS -->
+    <section id="menu" class="section">
+      <div class="container">
+        <h3 class="section__title reveal">Menu Cookies Kami</h3>
+        <p class="section__subtitle reveal delay-1">Pilih favoritmu, klik “Tambah” untuk masuk ke keranjang.</p>
+
+        <div id="productGrid" class="grid products"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section--alt">
+      <div class="container about__grid">
+        <div class="card reveal">
+          <h4>Kenapa aR's cookies?</h4>
+          <p>
+            Setiap batch dibuat dengan bahan premium dan resep keluarga Airthur.
+            Tidak ada pengawet, hanya cinta dan kualitas. Kami memanggang harian
+            agar kamu selalu mendapat cookies paling fresh.
+          </p>
+          <ul class="checklist">
+            <li>Biji cokelat Belgia & mentega Eropa</li>
+            <li>Tepung premium & telur organik</li>
+            <li>Kemasan ramah lingkungan</li>
+          </ul>
+        </div>
+        <div class="card reveal delay-1">
+          <h4>Pengiriman Cepat</h4>
+          <p>Kami bekerja sama dengan kurir tepercaya untuk pengiriman same-day (wilayah tertentu).
+             Pantau pesananmu dari checkout hingga tiba di pintu rumah.</p>
+          <div class="stats">
+            <div><span class="stat__num">15k+</span><span class="stat__label">Paket terkirim</span></div>
+            <div><span class="stat__num">120+</span><span class="stat__label">Kota terlayani</span></div>
+            <div><span class="stat__num">4.9</span><span class="stat__label">Rating</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact__grid">
+        <div class="card reveal">
+          <h4>Hubungi Kami</h4>
+          <p>Ingin pesanan kustom untuk acara? Tim kami siap bantu.</p>
+          <ul class="contact__list">
+            <li>📍 Jakarta</li>
+            <li>📞 08xx-xxxx-xxxx</li>
+            <li>✉️ hello@arscookies.example</li>
+            <li>IG: @ars.cookies</li>
+          </ul>
+        </div>
+        <form id="checkoutForm" class="card reveal">
+          <h4>Checkout</h4>
+          <div class="form__row">
+            <label>Nama</label>
+            <input type="text" name="name" placeholder="Nama lengkap" required>
+          </div>
+          <div class="form__row">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="email@contoh.com" required>
+          </div>
+          <div class="form__row">
+            <label>Alamat</label>
+            <textarea name="address" rows="3" placeholder="Alamat lengkap" required></textarea>
+          </div>
+          <div class="form__row">
+            <label>Metode Pembayaran</label>
+            <select name="payment" required>
+              <option value="">Pilih metode</option>
+              <option>Transfer Bank</option>
+              <option>E-Wallet</option>
+              <option>COD</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label>Catatan</label>
+            <input type="text" name="note" placeholder="(Opsional)">
+          </div>
+          <button type="submit" class="btn btn--primary full">Bayar Sekarang</button>
+          <p class="tiny">* Simulasi checkout: data tidak benar-benar diproses.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> aR's cookies — dibuat oleh Airthur</p>
+      <div class="footer__links">
+        <a href="#home">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">Tentang</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <aside id="cartDrawer" class="cart">
+    <div class="cart__header">
+      <h4>Keranjang</h4>
+      <button id="closeCart" class="btn btn--ghost" aria-label="Tutup">✕</button>
+    </div>
+    <div id="cartItems" class="cart__items"></div>
+    <div class="cart__footer">
+      <div class="cart__row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">Rp0</strong>
+      </div>
+      <div class="cart__actions">
+        <a href="#contact" class="btn btn--outline full" id="checkoutBtn">Checkout</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FLOATING AUDIO BUTTON -->
+  <button id="audioFab" class="audio-fab" aria-label="Toggle music">♫</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
