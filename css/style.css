@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #400000;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+header {
+    background-color: #800000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.slider {
+    padding: 20px;
+    text-align: center;
+}
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    animation: slide 10s infinite;
+}
+.slider-container img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s;
+}
+.slider-container img:hover {
+    transform: scale(1.05);
+}
+.products, .cart, .testimonials, .feedback, .store-info {
+    padding: 20px;
+    text-align: center;
+}
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.product {
+    background-color: #fdd;
+    padding: 10px;
+    border: 2px solid #800000;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.product:hover {
+    transform: scale(1.05);
+}
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+textarea {
+    width: 80%;
+    height: 100px;
+}
+footer {
+    background-color: #400000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+#toggle-theme, #mute-audio {
+    position: fixed;
+    top: 10px;
+    right: 60px;
+    margin-left: 10px;
+}
+#mute-audio {
+    right: 10px;
+}
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #800000;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}

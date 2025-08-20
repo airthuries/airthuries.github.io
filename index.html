@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiRt's - Toko Kaset Musik Klasik</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <audio id="backsound" autoplay loop>
+        <source src="assets/audio/rockbacksound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="toggle-theme">🌙/☀️</button>
+    <button id="mute-audio">🔊</button>
+
+    <header>
+        <h1>AiRt's</h1>
+        <p>Toko Kaset Musik Klasik</p>
+    </header>
+
+    <section class="slider">
+        <h2>Produk Terlaris</h2>
+        <div class="slider-container" id="slider-container">
+            <img src="assets/images/cassette1.svg" alt="Kaset 1">
+            <img src="assets/images/cassette2.svg" alt="Kaset 2">
+            <img src="assets/images/cassette3.svg" alt="Kaset 3">
+            <img src="assets/images/cassette4.svg" alt="Kaset 4">
+            <img src="assets/images/cassette5.svg" alt="Kaset 5">
+        </div>
+    </section>
+
+    <section class="products">
+        <h2>Katalog Kaset</h2>
+        <div class="product-list">
+            <div class="product" onclick="addToCart('Beethoven Symphony')">Beethoven Symphony</div>
+            <div class="product" onclick="addToCart('Mozart Collection')">Mozart Collection</div>
+            <div class="product" onclick="addToCart('Chopin Nocturnes')">Chopin Nocturnes</div>
+        </div>
+    </section>
+
+    <section class="cart">
+        <h2>Keranjang Belanja</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <section class="store-info">
+        <h3>Alamat Toko</h3>
+        <p>Jl. Dipenegoro 74, Bogor</p>
+    </section>
+
+    <section class="testimonials">
+        <h2>Testimoni Pelanggan</h2>
+        <div id="testimoni-list">
+            <p>"Pelayanan terbaik dan kualitas kaset luar biasa!" - Rina</p>
+            <p>"Musik klasiknya lengkap dan original!" - Doni</p>
+        </div>
+        <h3>Tulis Testimoni Anda</h3>
+        <textarea id="user-testimoni" placeholder="Tulis testimoni di sini..."></textarea>
+        <button onclick="submitTestimoni()">Kirim</button>
+    </section>
+
+    <section class="feedback">
+        <h2>Kritik & Saran</h2>
+        <textarea id="feedback-input" placeholder="Tulis kritik dan saran di sini..."></textarea>
+        <button onclick="submitFeedback()">Kirim</button>
+    </section>
+
+    <div id="toast" class="toast">Notifikasi</div>
+
+    <footer>
+        <p>© 2025 AiRt's - Toko Kaset Musik Klasik</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
